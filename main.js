@@ -8,13 +8,16 @@ async function start() {
   await sleep(100);
   await clear();
 }
-async function hack() {
+async function starthack() {
   await writeLine("Enter target ID", 50);
   await sleep(100);
-  await promptPassword("ID: ");
+  await promptPassword("ID: ", iD);
+  await writeLine(`Target ID: ${iD}`, 50);
 }
+var ID = iD;
+
 //async function loop() {
 start();
-//await hack();
+//await starthack();
 //}
 //sloop();
