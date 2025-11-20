@@ -30,6 +30,7 @@ function promptPassword(promptText, callback) {
 
   let label = document.createElement("span");
   label.textContent = promptText + " ";
+  label.classList.add("prompt-input");
   line.appendChild(label);
 
   let input = document.createElement("input");
