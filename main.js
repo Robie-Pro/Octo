@@ -6,8 +6,12 @@ async function start() {
   await writeLine("Loaded successfully", 50);
   await writeLine("Initializing Octo", 50);
   await sleep(100);
-  await promptPassword();
-  //await clear();
+  await clear();
 }
-
+async function hack() {
+  await writeLine("Enter target ID", 50);
+  await sleep(100);
+  await promptPassword("ID: ");
+}
 start();
+hack();
