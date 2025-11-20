@@ -13,6 +13,8 @@ async function hack() {
   await sleep(100);
   await promptPassword("ID: ");
 }
-start();
-
-await hack();
+async function loop() {
+  await start();
+  await hack();
+}
+loop();
