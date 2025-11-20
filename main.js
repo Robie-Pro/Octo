@@ -14,4 +14,4 @@ async function hack() {
   await promptPassword("ID: ");
 }
 start();
-hack();
+await hack();
