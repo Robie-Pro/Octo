@@ -16,8 +16,8 @@ async function starthack() {
 }
 var ID = iD;
 
-//async function loop() {
-start();
-//await starthack();
-//}
-//sloop();
+async function loop() {
+  await start();
+  await starthack();
+}
+loop();
