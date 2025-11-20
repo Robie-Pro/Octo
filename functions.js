@@ -29,13 +29,16 @@ function promptPassword(promptText, callback) {
   line.className = "prompt-line";
 
   let label = document.createElement("span");
-  label.textContent = promptText + " ";
-  label.classList.add("prompt-input");
+  label.textContent = promptText;
   line.appendChild(label);
 
   let input = document.createElement("input");
   input.type = "password";
   line.appendChild(input);
+
+  let cursor = document.createElement("span");
+  cursor.className = "cursor";
+  line.appendChild(cursor);
 
   document.getElementById("out").appendChild(line);
 
@@ -47,7 +50,6 @@ function promptPassword(promptText, callback) {
     }
   });
 }
-s;
 
 function clear() {
   document.getElementById("out").innerHTML = "";
