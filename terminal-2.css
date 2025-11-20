@@ -28,14 +28,6 @@ body::after {
     pointer-events: none;
 }
 /* Blinking terminal-style cursor */
-.cursor {
-    display: inline-block;
-    width: 8px;
-    height: 1.2em;
-    background-color: #0f0;
-    margin-left: 4px;
-    animation: blink 0.6s steps(1) infinite;
-}
 
 @keyframes blink {
     50% {
@@ -53,7 +45,7 @@ body::after {
 /* Style the input so it blends in */
 .prompt-line input {
     background: transparent;
-    color: #0f0;
+    color: white;
     border: none;
     outline: none;
     font-family: monospace;
