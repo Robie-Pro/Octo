@@ -30,7 +30,6 @@ function promptPassword(promptText, callback) {
 
   let label = document.createElement("span");
   label.textContent = promptText + " ";
-  label.classList.add("terminal-line-cursor-effect");
   line.appendChild(label);
 
   let input = document.createElement("input");

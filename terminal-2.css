@@ -27,14 +27,7 @@ body::after {
     );
     pointer-events: none;
 }
-.prompt-input {
-    background: transparent;
-    color: white;
-    border: none;
-    outline: none;
-    font-family: Inconsolata, monospace;
-    font-size: 1.3rem;
-    width: 300px;
-    caret-color: white; /* Makes the cursor green */
-    //text-shadow: 0 0 5px white;
+
+pre {
+    margin: 0;
 }
