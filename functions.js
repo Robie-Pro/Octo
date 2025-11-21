@@ -20,6 +20,10 @@ async function loadingPercent(prompt, speed) {
   }
 }
 
+function clear() {
+  document.getElementById("out").innerHTML = "";
+}
+
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
@@ -34,35 +38,13 @@ function promptPassword(promptText, callback) {
 
   let input = document.createElement("input");
   input.type = "password";
+  input.autocomplete = "off";
+  input.spellcheck = false;
+
   line.appendChild(input);
-
-  let cursor = document.createElement("span");
-  cursor.className = "cursor";
-  line.appendChild(cursor);
-
   document.getElementById("out").appendChild(line);
 
   input.focus();
-
-  input.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-      callback(input.value);
-    }
-  });
-}
-
-function clear() {
-  document.getElementById("out").innerHTML = "";
-}
-
-function prompt(callback) {
-  let line = document.createElement("div");
-  document.getElementById("out").appendChild(line);
-
-  let input = document.createElement("input");
-  input.classList.add("terminal-input");
-
-  line.appendChild(input);
 
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {

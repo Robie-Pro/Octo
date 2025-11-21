@@ -7,17 +7,15 @@ async function start() {
   await writeLine("Initializing Octo", 50);
   await sleep(100);
   await clear();
+  await hack0();
 }
-async function starthack() {
-  await writeLine("Enter target ID", 50);
-  await sleep(100);
-  await promptPassword("ID: ", iD);
-  await writeLine(`Target ID: ${iD}`, 50);
-}
-var ID = iD;
 
-async function loop() {
-  await start();
-  await starthack();
+async function hack0() {
+  await writeLine("Enter target ID", 50);
+
+  promptPassword("ID: ", async (idValue) => {
+    await writeLine(`Target ID: ${idValue}`, 50);
+  });
 }
-loop();
+
+start();
